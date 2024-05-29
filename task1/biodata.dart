@@ -1,21 +1,18 @@
 import 'dart:io';
 
 void main() {
-  // Function to prompt and read user input
   String prompt(String message) {
     stdout.write(message);
     return stdin.readLineSync()!;
   }
 
-  // Collecting user information
   String name = prompt('Enter your name: ');
   String phoneNumber = prompt('Enter your phone number: ');
   String age = prompt('Enter your age: ');
-  String height = prompt('Enter your height (e.g., 5\'9"): ');
-  String weight = prompt('Enter your weight (e.g., 70 kg): ');
+  String height = prompt('Enter your height ');
+  String weight = prompt('Enter your weight ');
   String address = prompt('Enter your address: ');
   
-  // Collecting hobbies
   List<String> hobbies = [];
   String hobby;
   do {
@@ -25,7 +22,6 @@ void main() {
     }
   } while (hobby.isNotEmpty);
 
-  // Formatting and displaying the biodata
   print('\n==================== BIODATA ====================');
   print('Name: $name');
   print('Phone Number: $phoneNumber');
